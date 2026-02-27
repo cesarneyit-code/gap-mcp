@@ -1,0 +1,30 @@
+[project]
+name = "gap-mcp"
+version = "0.1.0"
+description = "MCP server for GAP (Groups, Algorithms, Programming) — computational discrete algebra"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "César Galindo", email = "cesarneyit@gmail.com" }
+]
+keywords = ["mcp", "gap", "group-theory", "algebra", "mathematics"]
+classifiers = [
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Intended Audience :: Science/Research",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+gap-mcp = "gap_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/cesargalindo/gap-mcp"
+Repository = "https://github.com/cesargalindo/gap-mcp"

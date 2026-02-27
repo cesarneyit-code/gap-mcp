@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: gap-mcp
+Version: 0.1.0
+Summary: MCP server for GAP (Groups, Algorithms, Programming) — computational discrete algebra
+Author-email: César Galindo <cesarneyit@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/cesargalindo/gap-mcp
+Project-URL: Repository, https://github.com/cesargalindo/gap-mcp
+Keywords: mcp,gap,group-theory,algebra,mathematics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.9.0
+Requires-Dist: pydantic>=2.0.0

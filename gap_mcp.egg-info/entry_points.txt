@@ -1,0 +1,2 @@
+[console_scripts]
+gap-mcp = gap_mcp.server:main
