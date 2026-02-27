@@ -7,15 +7,29 @@ license = { text = "MIT" }
 authors = [
     { name = "César Galindo", email = "cesarneyit@gmail.com" }
 ]
-keywords = ["mcp", "gap", "group-theory", "algebra", "mathematics"]
+keywords = ["mcp", "gap", "group-theory", "algebra", "mathematics", "representation-theory"]
 classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Mathematics",
     "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
 ]
 requires-python = ">=3.11"
 dependencies = [
     "mcp[cli]>=1.9.0",
-    "pydantic>=2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.4",
+    "mypy>=1.10",
 ]
 
 [project.scripts]
@@ -26,5 +40,21 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project.urls]
-Homepage = "https://github.com/cesargalindo/gap-mcp"
-Repository = "https://github.com/cesargalindo/gap-mcp"
+Homepage   = "https://github.com/cesarneyit-code/gap-mcp"
+Repository = "https://github.com/cesarneyit-code/gap-mcp"
+"Bug Tracker" = "https://github.com/cesarneyit-code/gap-mcp/issues"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: requires GAP to be installed (deselect with -m 'not integration')",
+]
